@@ -55,7 +55,6 @@ export default {
     },
     onSuccess(position) {
       const { latitude, longitude } = position.coords;
-      console.log(latitude, longitude);
       this.api = `${this.url_base}weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${this.api_key}`;
       this.fetchWeather();
     },
@@ -64,7 +63,6 @@ export default {
     },
     setResults(results) {
       this.weather = results;
-      console.log(this.weather);
     },
     dateBuilder() {
       let d = new Date();
